@@ -195,3 +195,5 @@ Para fazer a simulação do código PID Cycling abra no VS Code um novo workspac
 Ao rodar o código, ele criará automaticamente um arquivo `.sto` na pasta `Results/pid`. Abrindo esse arquivo no Opensim permitirá ver a simulação gerada pelo código. 
 
 Também deve ser obtido o seguinte gráfico no próprio VS Code:
+
+![Gráfico PID](Images/Grafico_PID_Cycling.png)
