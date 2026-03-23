@@ -188,9 +188,7 @@ Essa nova configuração permite a execução de scripts criados pelo usuário.
 
 ## Simulando o código PID Cycling
 
-Para fazer a simulação do código PID Cycling abra no VS Code um novo workspace e adicione a seguinte pasta: 
-
-`Código PID`
+Para fazer a simulação do código PID Cycling abra no VS Code um novo workspace e adicione a pasta `Código PID.zip` anexada a este tutorial.
 
 Ao rodar o código, ele criará automaticamente um arquivo `.sto` na pasta `Results/pid`. Abrindo esse arquivo no Opensim permitirá ver a simulação gerada pelo código. 
 
