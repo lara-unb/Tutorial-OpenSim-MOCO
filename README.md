@@ -12,17 +12,23 @@ Utilizando seu e-mail de preferência, faça o login e baixe o [Anaconda](https:
 
 Durante a instalação, certifique-se de instalar o programa para todos os usuários (requer privilégios de administrador), de registrar o Anaconda3 as the system Python 3.1X e de criar atalhos de menu de iniciar, conforme indicado nas figuras abaixo.
 
+![Anaconda Setup 1](Images/Setup_1_Anaconda.png)
+
+![Anaconda Setup 2](Images/Setup_2_Anaconda.png)
+
 #### **ATENÇÃO: Para evitar problemas de path, instale ambos OpenSim e Anaconda no mesmo disco!**
 
 ## Criando o ambiente Python com MOCO
 
 1. Abra o Anaconda Prompt como Administrador
 
+![Anaconda Prompt](Images/Anaconda_Prompt.png)
+
 2. Atualize o conda com o seguinte comando (os privilégios de administrador serão necessários aqui):
 
         conda update -n base -c defaults conda
 
-    Se tudo tiver sido feito corretamente, aparecerão as seguintes mensagens:
+    Se tudo tiver sido feito corretamente, aparecerão as seguintes mensagens em todos os próximos passos:
 
         Preparing transaction: done
 
@@ -95,7 +101,11 @@ Faça o download e instale o [Visual Studio Code](https://code.visualstudio.com/
 Baixado o VS Code, abra-o e clique na aba de Extensões na barra lateral esquerda.
 Pesquise por "Python" e instale a extensão desenvolvida pela Microsoft.
 
+![VS Code Aba Extensão](Images/Aba_extensao_VS_Code.png)
+
 Em seguida, abra uma nova pasta vazia para guardar um projeto teste e, ainda nela, crie um arquivo chamado `main.py`.
+
+![VS Code Novo Arquivo](Images/New_File_VS_Code.png)
 
 Nesse arquivo `main.py`, coloque o seguinte script:
 
@@ -106,6 +116,10 @@ quit()
 ```
 
 Após editar o `main.py`, pressione o atalho _**ctrl+shift+p**_ para abrir a paleta de comandos, busque por `"Python: Select interpreter"` e escolha o ambiente conda previamente criado.
+
+![Python Interpreter](Images/Python_Interpreter.png)
+
+![Python Interpreter 2](Images/Python_Interpreter_2.png)
 
 Abrindo novamente a paleta de comandos, digite `"Preferences: Open User Settings (JSON)"` e selecione-o. Na aba aberta, adicione as seguintes linhas e reinicie o VS Code:
 
@@ -119,6 +133,8 @@ Abrindo novamente a paleta de comandos, digite `"Preferences: Open User Settings
     
 
 Certifique-se de acrescentar também uma vírgula ao final do script que já vem na aba, do contrário você receberá uma mensagem de erro de sintaxe. A aba deve ficar da seguinte forma após essas alterações:
+
+![Aba JSON](Images/Tutorial_Opensim.png)
 
 Reiniciado o VS Code, pressione o botão de play no canto superior direito da tela e rode o código `main.py`. Você deverá ver uma saída parecida com a seguinte:
 
@@ -134,13 +150,21 @@ Reiniciado o VS Code, pressione o botão de play no canto superior direito da te
     
 Após completar todos os passos acima, é possível que ocorra, ao tentar compilar algum código, a seguinte mensagem de erro de caminho:
 
+![Possível Erro 1](Images/Possível_Erro_1.png)
+
 Para corrigí-lo, digite no Windows “variáveis de Ambiente” e selecione “Editar variáveis
 de ambiente do sistema”.
 
+![Variáveis de Ambiente](Images/Editar_Variaveis_Ambiente.png)
+
 Em seguida, em “Variáveis do usuário”, selecione “Path” e clique em “Editar...”.
+
+![Janela Variáveis de Ambiente](Images/Janela_Variaveis_Ambiente.png)
 
 Clique em “Novo” e adicione os três caminhos indicados na imagem abaixo. Por fim,
 clique nos dois “Ok” (um em cada janela) e reinicie o computador.
+
+![Variáveis Adicionadas](Images/Paths_a_Adicionar.png)
 
 
 #### 2. Acesso não autorizado
@@ -148,13 +172,16 @@ clique nos dois “Ok” (um em cada janela) e reinicie o computador.
 Também é possível que ocorra um erro devido a política de execução do PowerShell,
 que impede o carregamento de scripts para proteção do sistema (PSSecurityException). 
 
+![Possível Erro 2](Images/Possível_Erro_2.png)
+
 Para corrigí-lo, digite no Windows “PoweShell”, clique com o botão direito e selecione
 “Executar como administrador”.
 
-Digite “Get-ExecutionPolicy” e dê enter. 
+![Windows PowerShell](Images/Windows_Powershell.png)
 
-Aparecendo a mensagem “Restricted”, digite “Set-ExecutionPolicy RemoteSigned” e
-enter novamente. Por fim, digite S (ou Y) e pressione enter.
+Digite “Get-ExecutionPolicy” e dê enter. Aparecendo a mensagem “Restricted”, digite “Set-ExecutionPolicy RemoteSigned” e enter novamente. Por fim, digite S (ou Y) e pressione enter. O prompt deve ficar da seguinte forma:
+
+![PowerShell Prompt](Images/PowerShell_Editado.png)
 
 Essa nova configuração permite a execução de scripts criados pelo usuário.
 
@@ -168,6 +195,3 @@ Para fazer a simulação do código PID Cycling abra no VS Code um novo workspac
 Ao rodar o código, ele criará automaticamente um arquivo `.sto` na pasta `Results/pid`. Abrindo esse arquivo no Opensim permitirá ver a simulação gerada pelo código. 
 
 Também deve ser obtido o seguinte gráfico no próprio VS Code:
-
-
-
